@@ -58,7 +58,7 @@ export default function Certifications() {
                             <span>CREDENTIALS</span>
                             <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
                         </div>
-                        <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 font-mono mb-4 tracking-tighter">
+                        <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 font-mono mb-4 tracking-tighter glitch" data-text="<CERTIFICATIONS/>">
                             &lt;CERTIFICATIONS/&gt;
                         </h2>
                         <p className="text-gray-500 font-mono tracking-widest text-sm">

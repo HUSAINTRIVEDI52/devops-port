@@ -49,7 +49,7 @@ export default function Contact() {
                     className="mb-16 text-center"
                 >
                     <div className="flex flex-col items-center mb-16">
-                        <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 font-mono mb-4 tracking-tighter">
+                        <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 font-mono mb-4 tracking-tighter glitch" data-text="> GET_IN_TOUCH">
                             &gt; GET_IN_TOUCH
                         </h2>
                         <p className="text-gray-500 font-mono tracking-widest text-sm uppercase">

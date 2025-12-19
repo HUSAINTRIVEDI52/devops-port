@@ -18,6 +18,7 @@ export const metadata: Metadata = {
 };
 
 import Cursor from "@/components/Cursor";
+import Preloader from "@/components/Preloader";
 
 export default function RootLayout({
   children,
@@ -27,8 +28,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased scanline-move`}
       >
+        <Preloader />
         <Cursor />
         {children}
       </body>

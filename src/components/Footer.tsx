@@ -32,7 +32,7 @@ export default function Footer() {
                             </div>
                         </div>
 
-                        <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
+                        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 border-t border-white/10 pt-6">
                             <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
                                 <div className="text-green-400 font-bold text-lg">99.9%</div>
                                 <div className="text-[10px] text-gray-500 uppercase tracking-wider">Uptime</div>
