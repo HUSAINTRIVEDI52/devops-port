@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ExternalLink, Github } from "lucide-react";
-import Link from "next/link";
+
 
 const projects = [
     {
@@ -10,8 +9,6 @@ const projects = [
         desc: "Automated provisioning of scalable AWS infrastructure (EC2, VPC, S3) using Terraform and Ansible.",
         tags: ["AWS", "Terraform", "Ansible"],
         color: "from-orange-500 to-yellow-500",
-        link: "#",
-        github: "#",
         image: "https://images.unsplash.com/photo-1518432031352-d6fc5c10da5a?q=80&w=800&auto=format&fit=crop", // Cloud/Data Center
     },
     {
@@ -19,8 +16,6 @@ const projects = [
         desc: "Designed and implemented a robust CI/CD pipeline using Jenkins and GitHub Actions for automated testing and deployment.",
         tags: ["Jenkins", "GitHub Actions", "Docker"],
         color: "from-blue-500 to-cyan-500",
-        link: "#",
-        github: "#",
         image: "https://images.unsplash.com/photo-1607799275518-d6cfa15e0c0f?q=80&w=800&auto=format&fit=crop", // Code/Matrix
     },
     {
@@ -28,8 +23,6 @@ const projects = [
         desc: "Deployed and managed microservices architecture using Docker containers and Kubernetes orchestration.",
         tags: ["Docker", "Kubernetes", "Microservices"],
         color: "from-blue-600 to-indigo-500",
-        link: "#",
-        github: "#",
         image: "https://images.unsplash.com/photo-1605745341112-85968b19335b?q=80&w=800&auto=format&fit=crop", // Containers
     },
     {
@@ -37,8 +30,6 @@ const projects = [
         desc: "Built a documentation assistant using LLMs to automate code documentation and explanation.",
         tags: ["Python", "LLM", "Automation"],
         color: "from-green-500 to-emerald-500",
-        link: "#",
-        github: "#",
         image: "https://images.unsplash.com/photo-1531746790731-6c087fecd65a?q=80&w=800&auto=format&fit=crop", // AI/Robot
     },
     {
@@ -46,8 +37,6 @@ const projects = [
         desc: "Real-time server monitoring solution using Prometheus and Grafana for performance metrics.",
         tags: ["Prometheus", "Grafana", "Linux"],
         color: "from-purple-500 to-pink-500",
-        link: "#",
-        github: "#",
         image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop", // Dashboard
     },
     {
@@ -55,8 +44,6 @@ const projects = [
         desc: "Implemented a secure file storage system on AWS S3 with strict IAM policies and encryption.",
         tags: ["AWS S3", "IAM", "Security"],
         color: "from-red-500 to-orange-500",
-        link: "#",
-        github: "#",
         image: "https://images.unsplash.com/photo-1614064641938-3bbee52942c7?q=80&w=800&auto=format&fit=crop", // Security/Lock
     },
 ];
@@ -89,8 +76,7 @@ export default function Projects() {
                             className="group relative bg-white/5 border border-white/10 rounded-xl overflow-hidden hover:border-white/20 transition-all"
                         >
                             {/* Project Image */}
-                            <div className="relative h-48 w-full overflow-hidden">
-                                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-20 z-10 group-hover:opacity-0 transition-opacity`} />
+                            <div className="relative h-64 w-full overflow-hidden">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
                                 <img
                                     src={project.image}
@@ -115,14 +101,7 @@ export default function Projects() {
                                     ))}
                                 </div>
 
-                                <div className="flex items-center gap-4">
-                                    <Link href={project.link} className="flex items-center gap-2 text-sm text-white hover:text-cyan-400 transition-colors">
-                                        <ExternalLink size={16} /> Live Demo
-                                    </Link>
-                                    <Link href={project.github} className="flex items-center gap-2 text-sm text-white hover:text-cyan-400 transition-colors">
-                                        <Github size={16} /> Source Code
-                                    </Link>
-                                </div>
+
                             </div>
                         </motion.div>
                     ))}
