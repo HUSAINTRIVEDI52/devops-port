@@ -47,10 +47,31 @@ export default function Hero() {
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
+                    {/* Profile Picture - Shown first on mobile */}
+                    <motion.div
+                        initial={{ opacity: 0, scale: 0.8 }}
+                        animate={{ opacity: 1, scale: 1 }}
+                        transition={{ duration: 0.8, delay: 0.2 }}
+                        className="relative flex justify-center items-center order-1 lg:order-2"
+                    >
+                        <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] mx-auto">
+                            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-[20px] opacity-50 animate-pulse" />
+                            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
+                                {/* eslint-disable-next-line @next/next/no-img-element */}
+                                <img
+                                    src="https://github.com/husaintrivedi52.png"
+                                    alt="Husain Trivedi"
+                                    className="w-full h-full object-cover"
+                                />
+                            </div>
+                        </div>
+                    </motion.div>
+
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
+                        className="order-2 lg:order-1"
                     >
                         <div className="inline-block px-3 py-1 mb-6 border border-cyan-500/30 rounded-full bg-cyan-500/10">
                             <span className="text-cyan-400 font-mono text-sm">👋 HELLO WORLD</span>
@@ -118,26 +139,6 @@ export default function Hero() {
                             <a href="mailto:husaintrivedi@zohomail.in" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-110">
                                 <Mail size={24} />
                             </a>
-                        </div>
-                    </motion.div>
-
-                    {/* Profile Picture */}
-                    <motion.div
-                        initial={{ opacity: 0, scale: 0.8 }}
-                        animate={{ opacity: 1, scale: 1 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="relative hidden lg:block flex justify-center items-center"
-                    >
-                        <div className="relative w-[400px] h-[400px] mx-auto">
-                            <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-[20px] opacity-50 animate-pulse" />
-                            <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
-                                {/* eslint-disable-next-line @next/next/no-img-element */}
-                                <img
-                                    src="https://github.com/husaintrivedi52.png"
-                                    alt="Husain Trivedi"
-                                    className="w-full h-full object-cover"
-                                />
-                            </div>
                         </div>
                     </motion.div>
                 </div>

@@ -139,7 +139,7 @@ export default function Contact() {
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                <label className="text-xs font-mono text-gray-500 uppercase tracking-wider mb-2 block">SUBJECT.OPTIONAL</label>
+                                <label className="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-2 block">SUBJECT.REQUIRED</label>
                                 <input
                                     type="text"
                                     name="subject"

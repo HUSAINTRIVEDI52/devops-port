@@ -5,6 +5,10 @@ export async function POST(req: Request) {
     try {
         const { name, email, subject, message } = await req.json();
 
+        if (!name || !email || !subject || !message) {
+            return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
+        }
+
         const transporter = nodemailer.createTransport({
             service: 'gmail',
             auth: {
