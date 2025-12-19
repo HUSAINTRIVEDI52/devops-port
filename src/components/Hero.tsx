@@ -47,14 +47,14 @@ export default function Hero() {
 
             <div className="container mx-auto px-4 md:px-6 relative z-10">
                 <div className="grid lg:grid-cols-2 gap-12 items-center">
-                    {/* Profile Picture - Shown first on mobile */}
+                    {/* Profile Picture - Desktop Only */}
                     <motion.div
                         initial={{ opacity: 0, scale: 0.8 }}
                         animate={{ opacity: 1, scale: 1 }}
                         transition={{ duration: 0.8, delay: 0.2 }}
-                        className="relative flex justify-center items-center order-1 lg:order-2"
+                        className="relative hidden lg:flex justify-center items-center order-1 lg:order-2"
                     >
-                        <div className="relative w-[280px] h-[280px] md:w-[400px] md:h-[400px] mx-auto">
+                        <div className="relative w-[400px] h-[400px] mx-auto">
                             <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-[20px] opacity-50 animate-pulse" />
                             <div className="relative w-full h-full rounded-full overflow-hidden border-4 border-white/10 shadow-2xl">
                                 {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -76,12 +76,25 @@ export default function Hero() {
                         <div className="inline-block px-3 py-1 mb-6 border border-cyan-500/30 rounded-full bg-cyan-500/10">
                             <span className="text-cyan-400 font-mono text-sm">👋 HELLO WORLD</span>
                         </div>
-                        <h1 className="text-4xl md:text-7xl font-bold mb-6 tracking-tight">
-                            Hi, I'm <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
-                                Husain
-                            </span>
-                        </h1>
+                        <div className="flex items-center gap-4 mb-6">
+                            <h1 className="text-4xl md:text-7xl font-bold tracking-tight">
+                                Hi, I'm <br />
+                                <span className="text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500">
+                                    Husain
+                                </span>
+                            </h1>
+                            {/* Small Profile Photo for Mobile */}
+                            <div className="lg:hidden relative w-20 h-20 shrink-0">
+                                <div className="absolute inset-0 bg-gradient-to-r from-cyan-500 to-purple-500 rounded-full blur-[10px] opacity-50 animate-pulse" />
+                                <div className="relative w-full h-full rounded-full overflow-hidden border-2 border-white/10 shadow-xl">
+                                    <img
+                                        src="https://github.com/husaintrivedi52.png"
+                                        alt="Husain Trivedi"
+                                        className="w-full h-full object-cover"
+                                    />
+                                </div>
+                            </div>
+                        </div>
                         <h2 className="text-xl md:text-3xl text-gray-300 mb-8 font-light h-10">
                             I'm a <span className="font-mono text-cyan-400">{text}</span>
                             <span className="animate-pulse text-cyan-400">|</span>
