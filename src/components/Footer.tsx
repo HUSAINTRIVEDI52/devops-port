@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin, Twitter, Mail, Clock, Zap } from "lucide-react";
+import { Github, Linkedin, Instagram, Mail, Clock, Zap } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -10,7 +10,7 @@ export default function Footer() {
                         <div className="flex items-center gap-2 mb-2">
                             <span className="text-cyan-400 text-2xl font-bold">&gt;_</span>
                             <Link href="/" className="text-2xl font-bold font-mono tracking-tighter text-white">
-                                CODEXOFT<span className="text-cyan-400">.KE</span>
+                                HUSAIN<span className="text-cyan-400"> TRIVEDI</span>
                             </Link>
                         </div>
                         <p className="text-xs font-mono text-gray-500 mb-6">
@@ -18,8 +18,7 @@ export default function Footer() {
                         </p>
 
                         <p className="text-gray-400 max-w-sm mb-6 text-sm leading-relaxed">
-                            Building innovative solutions with full-stack development expertise.
-                            Specializing in frontend, backend, mobile apps, and custom ERP systems.
+                            Combining cloud engineering with AI-assisted development to deliver scalable solutions.
                         </p>
 
                         <div className="flex items-center gap-4 text-xs font-mono text-cyan-400 mb-6">
@@ -74,8 +73,8 @@ export default function Footer() {
                             <Link href="https://linkedin.com/in/husaintrivedi52" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-colors">
                                 <Linkedin size={20} />
                             </Link>
-                            <Link href="https://twitter.com" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-colors">
-                                <Twitter size={20} />
+                            <Link href="https://www.instagram.com/techs.helps/" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-colors">
+                                <Instagram size={20} />
                             </Link>
                             <Link href="mailto:husaintrivedi@zohomail.in" className="text-gray-400 hover:text-cyan-400 transition-colors">
                                 <Mail size={20} />

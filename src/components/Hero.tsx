@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, Download, Github, Linkedin, Twitter, Mail, ExternalLink } from "lucide-react";
+import { ArrowRight, Download, Github, Linkedin, Instagram, Mail, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 import { useState, useEffect } from "react";
@@ -108,8 +108,8 @@ export default function Hero() {
                             <a href="https://linkedin.com/in/husaintrivedi52" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-110">
                                 <Linkedin size={24} />
                             </a>
-                            <a href="https://twitter.com" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-110">
-                                <Twitter size={24} />
+                            <a href="https://www.instagram.com/techs.helps/" target="_blank" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-110">
+                                <Instagram size={24} />
                             </a>
                             <a href="mailto:husaintrivedi@zohomail.in" className="text-gray-400 hover:text-cyan-400 transition-colors transform hover:scale-110">
                                 <Mail size={24} />
