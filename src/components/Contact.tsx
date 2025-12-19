@@ -48,10 +48,14 @@ export default function Contact() {
                     transition={{ duration: 0.6 }}
                     className="mb-16 text-center"
                 >
-                    <h2 className="text-sm font-mono text-cyan-400 mb-2">04. GET IN TOUCH</h2>
-                    <h3 className="text-3xl md:text-4xl font-bold text-white">
-                        Let's Work <span className="text-purple-500">Together</span>
-                    </h3>
+                    <div className="flex flex-col items-center mb-16">
+                        <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 to-pink-500 font-mono mb-4 tracking-tighter">
+                            &gt; GET_IN_TOUCH
+                        </h2>
+                        <p className="text-gray-500 font-mono tracking-widest text-sm uppercase">
+                            contact.establish_connection()...
+                        </p>
+                    </div>
                 </motion.div>
 
                 <div className="grid lg:grid-cols-2 gap-12">
@@ -110,60 +114,60 @@ export default function Contact() {
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div className="grid md:grid-cols-2 gap-6">
                                 <div className="space-y-2">
-                                    <label className="text-sm font-mono text-gray-400">Name</label>
+                                    <label className="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-2 block">NAME.REQUIRED</label>
                                     <input
                                         type="text"
                                         name="name"
                                         value={formData.name}
                                         onChange={handleChange}
                                         required
-                                        className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                                        placeholder="John Doe"
+                                        className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-white font-mono focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/50 transition-all placeholder:text-gray-700"
+                                        placeholder="Your name"
                                     />
                                 </div>
                                 <div className="space-y-2">
-                                    <label className="text-sm font-mono text-gray-400">Email</label>
+                                    <label className="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-2 block">EMAIL.REQUIRED</label>
                                     <input
                                         type="email"
                                         name="email"
                                         value={formData.email}
                                         onChange={handleChange}
                                         required
-                                        className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                                        placeholder="john@example.com"
+                                        className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-white font-mono focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/50 transition-all placeholder:text-gray-700"
+                                        placeholder="your.email@example.com"
                                     />
                                 </div>
                             </div>
                             <div className="space-y-2">
-                                <label className="text-sm font-mono text-gray-400">Subject</label>
+                                <label className="text-xs font-mono text-gray-500 uppercase tracking-wider mb-2 block">SUBJECT.OPTIONAL</label>
                                 <input
                                     type="text"
                                     name="subject"
                                     value={formData.subject}
                                     onChange={handleChange}
                                     required
-                                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors"
-                                    placeholder="Project Inquiry"
+                                    className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-white font-mono focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/50 transition-all placeholder:text-gray-700"
+                                    placeholder="Project discussion"
                                 />
                             </div>
                             <div className="space-y-2">
-                                <label className="text-sm font-mono text-gray-400">Message</label>
+                                <label className="text-xs font-mono text-cyan-400 uppercase tracking-wider mb-2 block">MESSAGE.REQUIRED</label>
                                 <textarea
                                     name="message"
                                     value={formData.message}
                                     onChange={handleChange}
                                     required
                                     rows={4}
-                                    className="w-full bg-black/50 border border-white/10 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-cyan-400 transition-colors resize-none"
+                                    className="w-full bg-black border border-white/20 rounded-lg px-4 py-3 text-white font-mono focus:outline-none focus:border-cyan-400 focus:ring-1 focus:ring-cyan-400/50 transition-all resize-none placeholder:text-gray-700"
                                     placeholder="Tell me about your project..."
                                 />
                             </div>
                             <button
                                 type="submit"
                                 disabled={status === "sending"}
-                                className="w-full bg-gradient-to-r from-cyan-500 to-blue-500 text-black font-bold py-4 rounded-lg hover:opacity-90 transition-opacity flex items-center justify-center gap-2 disabled:opacity-50"
+                                className="w-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold font-mono py-4 rounded-lg hover:opacity-90 transition-all flex items-center justify-center gap-2 disabled:opacity-50 uppercase tracking-widest shadow-[0_0_20px_rgba(6,182,212,0.3)] hover:shadow-[0_0_30px_rgba(168,85,247,0.5)]"
                             >
-                                {status === "sending" ? "Sending..." : "Send Message"} <Send size={18} />
+                                {status === "sending" ? "SENDING_DATA..." : "SEND_MESSAGE"} <Send size={18} />
                             </button>
                             {status === "success" && (
                                 <p className="text-green-400 text-center font-mono">Message sent successfully!</p>

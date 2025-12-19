@@ -59,10 +59,19 @@ export default function Projects() {
                     transition={{ duration: 0.6 }}
                     className="mb-16"
                 >
-                    <h2 className="text-sm font-mono text-cyan-400 mb-2">03. FEATURED PROJECTS</h2>
-                    <h3 className="text-3xl md:text-4xl font-bold text-white">
-                        My Creative <span className="text-purple-500">Portfolio</span>
-                    </h3>
+                    <div className="flex flex-col items-center mb-16">
+                        <div className="flex items-center gap-2 text-cyan-400 mb-4 font-mono text-sm tracking-widest">
+                            <span className="text-2xl">&gt;_</span>
+                            <span>WORK_LOG</span>
+                            <div className="w-2 h-2 bg-cyan-400 rounded-full animate-pulse" />
+                        </div>
+                        <h2 className="text-5xl md:text-7xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 font-mono mb-4 tracking-tighter">
+                            &lt;PROJECTS/&gt;
+                        </h2>
+                        <p className="text-gray-500 font-mono tracking-widest text-sm">
+                            LOADING_WORK()...
+                        </p>
+                    </div>
                 </motion.div>
 
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">

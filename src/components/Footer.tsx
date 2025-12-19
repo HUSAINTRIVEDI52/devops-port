@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { Github, Linkedin, Twitter, Mail } from "lucide-react";
+import { Github, Linkedin, Twitter, Mail, Clock, Zap } from "lucide-react";
 
 export default function Footer() {
     return (
@@ -7,15 +7,45 @@ export default function Footer() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
                     <div className="col-span-1 md:col-span-2">
-                        <Link href="/" className="text-2xl font-bold font-mono tracking-tighter mb-4 block">
-                            HUSAIN<span className="text-cyan-400"> TRIVEDI</span>
-                        </Link>
-                        <p className="text-gray-400 max-w-sm mb-6">
-                            Combining cloud engineering with AI-assisted development to deliver scalable solutions.
+                        <div className="flex items-center gap-2 mb-2">
+                            <span className="text-cyan-400 text-2xl font-bold">&gt;_</span>
+                            <Link href="/" className="text-2xl font-bold font-mono tracking-tighter text-white">
+                                CODEXOFT<span className="text-cyan-400">.KE</span>
+                            </Link>
+                        </div>
+                        <p className="text-xs font-mono text-gray-500 mb-6">
+                            SYSTEM_STATUS: OPERATIONAL
                         </p>
-                        <div className="flex items-center gap-2 px-3 py-1 w-fit rounded-full bg-green-500/10 border border-green-500/20">
-                            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
-                            <span className="text-xs font-mono text-green-400">AVAILABLE FOR WORK</span>
+
+                        <p className="text-gray-400 max-w-sm mb-6 text-sm leading-relaxed">
+                            Building innovative solutions with full-stack development expertise.
+                            Specializing in frontend, backend, mobile apps, and custom ERP systems.
+                        </p>
+
+                        <div className="flex items-center gap-4 text-xs font-mono text-cyan-400 mb-6">
+                            <div className="flex items-center gap-2">
+                                <Clock size={14} />
+                                <span>LOCAL_TIME: {new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}</span>
+                            </div>
+                            <div className="flex items-center gap-2 text-green-400">
+                                <Zap size={14} />
+                                <span>ACTIVE</span>
+                            </div>
+                        </div>
+
+                        <div className="grid grid-cols-3 gap-4 border-t border-white/10 pt-6">
+                            <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
+                                <div className="text-green-400 font-bold text-lg">99.9%</div>
+                                <div className="text-[10px] text-gray-500 uppercase tracking-wider">Uptime</div>
+                            </div>
+                            <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
+                                <div className="text-cyan-400 font-bold text-lg">1000+</div>
+                                <div className="text-[10px] text-gray-500 uppercase tracking-wider">Commits</div>
+                            </div>
+                            <div className="text-center p-3 bg-white/5 rounded-lg border border-white/10">
+                                <div className="text-orange-400 font-bold text-lg">∞</div>
+                                <div className="text-[10px] text-gray-500 uppercase tracking-wider">Coffee</div>
+                            </div>
                         </div>
                     </div>
 
