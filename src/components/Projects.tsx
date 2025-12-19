@@ -16,7 +16,7 @@ const projects = [
         desc: "Designed and implemented a robust CI/CD pipeline using Jenkins and GitHub Actions for automated testing and deployment.",
         tags: ["Jenkins", "GitHub Actions", "Docker"],
         color: "from-blue-500 to-cyan-500",
-        image: "https://images.unsplash.com/photo-1607799275518-d6cfa15e0c0f?q=80&w=800&auto=format&fit=crop", // Code/Matrix
+        image: "https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop", // Code/Matrix
     },
     {
         title: "Containerized Microservices",
