@@ -9,6 +9,8 @@ import { useState, useEffect } from "react";
 import BackgroundElements from "./BackgroundElements";
 import TechStack from "./TechStack";
 
+
+
 export default function Hero() {
     const [text, setText] = useState("");
     const [isDeleting, setIsDeleting] = useState(false);
@@ -73,8 +75,10 @@ export default function Hero() {
                         transition={{ duration: 0.8 }}
                         className="order-2 lg:order-1"
                     >
-                        <div className="inline-block px-3 py-1 mb-6 border border-cyan-500/30 rounded-full bg-cyan-500/10">
-                            <span className="text-cyan-400 font-mono text-sm">👋 HELLO WORLD</span>
+                        <div className="flex flex-wrap items-center gap-4 mb-6">
+                            <div className="inline-block px-3 py-1 border border-cyan-500/30 rounded-full bg-cyan-500/10">
+                                <span className="text-cyan-400 font-mono text-sm">👋 HELLO WORLD</span>
+                            </div>
                         </div>
                         <div className="flex items-center gap-4 mb-6">
                             <h1 className="text-4xl md:text-7xl font-bold tracking-tight">

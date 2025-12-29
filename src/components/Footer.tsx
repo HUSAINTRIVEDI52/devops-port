@@ -1,4 +1,9 @@
 import Link from "next/link";
+
+
+
+
+
 import { Github, Linkedin, Instagram, Mail, Clock, Zap } from "lucide-react";
 
 export default function Footer() {

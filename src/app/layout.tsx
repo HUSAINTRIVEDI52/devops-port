@@ -13,8 +13,53 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Husain Trivedi | Portfolio",
-  description: "Full Stack Developer Portfolio - Cloud Engineering & AI Solutions",
+  title: {
+    default: "Husain Trivedi | Cloud Engineer & Full Stack Developer",
+    template: "%s | Husain Trivedi"
+  },
+  description: "Portfolio of Husain Trivedi, a Cloud Engineer and Full Stack Developer specializing in DevOps, AI Automation, and Scalable Solutions.",
+  keywords: ["Cloud Engineer", "DevOps", "Full Stack Developer", "AI Automation", "Husain Trivedi", "Web Development", "Next.js", "React"],
+  authors: [{ name: "Husain Trivedi" }],
+  creator: "Husain Trivedi",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: "https://husaintrivedi.com",
+    title: "Husain Trivedi | Cloud Engineer & Full Stack Developer",
+    description: "Cloud Engineering, DevOps, and AI-driven automation solutions.",
+    siteName: "Husain Trivedi Portfolio",
+    images: [
+      {
+        url: "/og-image.png", // Ensure this image exists in public folder
+        width: 1200,
+        height: 630,
+        alt: "Husain Trivedi Portfolio",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Husain Trivedi | Cloud Engineer & Full Stack Developer",
+    description: "Cloud Engineering, DevOps, and AI-driven automation solutions.",
+    creator: "@husaintrivedi", // Replace with actual handle if available
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Husain Trivedi",
+  "url": "https://husaintrivedi.com",
+  "jobTitle": "Cloud Engineer & Full Stack Developer",
+  "sameAs": [
+    "https://github.com/husaintrivedi52",
+    "https://linkedin.com/in/husaintrivedi52",
+    "https://www.instagram.com/techs.helps/"
+  ]
 };
 
 import Cursor from "@/components/Cursor";
@@ -32,6 +77,10 @@ export default function RootLayout({
       >
         <Preloader />
         <Cursor />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
         {children}
       </body>
     </html>
