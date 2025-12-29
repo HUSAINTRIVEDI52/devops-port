@@ -9,17 +9,37 @@ export async function POST(req: Request) {
             return NextResponse.json({ error: 'Missing required fields' }, { status: 400 });
         }
 
+        console.log('Attempting to send email...');
+        const emailUser = process.env.EMAIL_USER;
+        const emailPass = process.env.EMAIL_PASS;
+        const emailHost = process.env.EMAIL_HOST || 'smtp.gmail.com';
+        const emailPort = parseInt(process.env.EMAIL_PORT || '465');
+
+        console.log('EMAIL_USER exists:', !!emailUser);
+        console.log('EMAIL_PASS exists:', !!emailPass);
+        console.log('Using Host:', emailHost, 'Port:', emailPort);
+
+        if (!emailUser || !emailPass) {
+            console.error('Missing email credentials in environment variables');
+            return NextResponse.json({ 
+                error: 'Email configuration error', 
+                details: 'EMAIL_USER or EMAIL_PASS environment variables are not set.' 
+            }, { status: 500 });
+        }
+
         const transporter = nodemailer.createTransport({
-            service: 'gmail',
+            host: emailHost,
+            port: emailPort,
+            secure: emailPort === 465, // true for 465, false for other ports
             auth: {
-                user: process.env.EMAIL_USER,
-                pass: process.env.EMAIL_PASS,
+                user: emailUser,
+                pass: emailPass,
             },
         });
 
         const mailOptions = {
-            from: process.env.EMAIL_USER,
-            to: process.env.EMAIL_USER, // Send to yourself
+            from: emailUser,
+            to: emailUser, // Send to yourself
             replyTo: email,
             subject: `Portfolio Contact: ${subject}`,
             text: `
@@ -42,10 +62,16 @@ export async function POST(req: Request) {
         };
 
         await transporter.sendMail(mailOptions);
+        console.log('Email sent successfully');
 
         return NextResponse.json({ message: 'Email sent successfully' }, { status: 200 });
     } catch (error: any) {
         console.error('Error sending email:', error);
-        return NextResponse.json({ error: 'Failed to send email', details: error.message }, { status: 500 });
+        return NextResponse.json({ 
+            error: 'Failed to send email', 
+            details: error.message,
+            code: error.code,
+            command: error.command
+        }, { status: 500 });
     }
 }
