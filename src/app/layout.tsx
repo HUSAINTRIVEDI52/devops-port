@@ -24,7 +24,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://husaintrivedi.com",
+    url: "https://husaintrivedi.site",
     title: "Husain Trivedi | Cloud Engineer & Full Stack Developer",
     description: "Cloud Engineering, DevOps, and AI-driven automation solutions.",
     siteName: "Husain Trivedi Portfolio",
@@ -53,7 +53,7 @@ const jsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",
   "name": "Husain Trivedi",
-  "url": "https://husaintrivedi.com",
+  "url": "https://husaintrivedi.site",
   "jobTitle": "Cloud Engineer & Full Stack Developer",
   "sameAs": [
     "https://github.com/husaintrivedi52",
