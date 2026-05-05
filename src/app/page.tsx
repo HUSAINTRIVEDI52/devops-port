@@ -2,10 +2,10 @@ import Header from "@/components/Header";
 import Hero from "@/components/Hero";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
+import Experience from "@/components/Experience";
 import Projects from "@/components/Projects";
 import Certifications from "@/components/Certifications";
 import Contact from "@/components/Contact";
-import InstagramFeed from "@/components/InstagramFeed";
 import Footer from "@/components/Footer";
 
 export default function Home() {
@@ -14,8 +14,8 @@ export default function Home() {
       <Header />
       <Hero />
       <About />
-      <InstagramFeed />
       <Skills />
+      <Experience />
       <Projects />
       <Certifications />
       <Contact />

@@ -11,6 +11,7 @@ const certifications = [
         tags: ["DevOps", "Cloud", "Physics Wallah"],
         color: "from-purple-600 to-blue-600",
         image: null, // Placeholder will be used
+        link: "https://pwskills.com/learn/certificate/3f15224e-bf33-45d3-b5ce-3447ee7d9401/?isCareerPath=true",
     },
     {
         title: "AWS Cloud Workshop",
@@ -111,6 +112,17 @@ export default function Certifications() {
                                         </span>
                                     ))}
                                 </div>
+
+                                {cert.link && (
+                                    <a
+                                        href={cert.link}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        className="mt-4 text-cyan-400 hover:text-cyan-300 text-sm font-mono flex items-center gap-1 transition-colors"
+                                    >
+                                        View Certificate →
+                                    </a>
+                                )}
                             </div>
                         </motion.div>
                     ))}

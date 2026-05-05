@@ -115,13 +115,15 @@ export default function Hero() {
                                 View My Work
                                 <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
                             </Link>
-                            <Link
-                                href="/resume"
+                            <a
+                                href="/Husain_trivedi_devops.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
                                 className="px-6 md:px-8 py-3 border border-white/20 text-white font-bold rounded-full text-sm md:text-base flex items-center gap-2 hover:bg-white/10 transition-all duration-300"
                             >
                                 View Resume
                                 <Download size={18} />
-                            </Link>
+                            </a>
                         </div>
 
                         <div className="flex items-center gap-6 mb-12">
