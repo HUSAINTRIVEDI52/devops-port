@@ -6,7 +6,7 @@ import { Briefcase, Calendar, MapPin } from "lucide-react";
 const experiences = [
     {
         role: "DevOps Intern",
-        company: "Radixweb",
+        company: "Creole Studios",
         location: "Ahmedabad, India",
         duration: "Jan 2025 - Apr 2025",
         type: "Internship",
